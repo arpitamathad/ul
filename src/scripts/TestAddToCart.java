@@ -1,5 +1,6 @@
 package scripts;
-
+//completed
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -8,13 +9,14 @@ import generic.GetXLData;
 import generic.Valid;
 import page.HomePage;
 import page.SwingCheckoutPage;
+import page.SwingProductLogout;
 import page.SwingProductPage;
 import page.SwingsPage;
 import page.UserPage;
 
 public class TestAddToCart extends BaseTest {
 
-	// Scenario 3 ----> add to cart til checkout
+	// Scenario 3 ----> add to cart til checkout 
 		@Test
 		public void TestAddtoCart() throws Exception{
 			HomePage homePage = new HomePage(driver);
@@ -27,10 +29,8 @@ public class TestAddToCart extends BaseTest {
 			homePage.clickOnLogin();
 			Thread.sleep(1000);
 			String un = GetXLData.getXLData("./excel/logincredentials.xlsx", 1, 0);
-			System.out.println(un);
 			homePage.setLoginUsername(un);
 			String pw = GetXLData.getXLData("./excel/logincredentials.xlsx", 1, 1);
-			System.out.println(pw);
 			homePage.setLoginPassword(pw);
 			homePage.clickLogin(); 
 			v.verifyHomePage("Furniture Online: Buy Home Wooden Furniture in India @ 30% OFF - Urban Ladder",driver);
@@ -55,5 +55,10 @@ public class TestAddToCart extends BaseTest {
 			
 			SwingCheckoutPage swingcheckout = new SwingCheckoutPage(driver);
 			swingcheckout.clickOnCheckout();
+			Thread.sleep(1000);
+			
+			SwingProductLogout s = new SwingProductLogout(driver);
+			s.logoutHover();
+			s.logout();
 		}
 }

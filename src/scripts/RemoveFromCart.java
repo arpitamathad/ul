@@ -1,21 +1,22 @@
 package scripts;
-import org.openqa.selenium.By;
 //completed
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
 import generic.GetXLData;
 import generic.Valid;
 import page.HomePage;
+import page.SwingCheckoutPage;
+import page.SwingProductLogout;
+import page.SwingProductPage;
 import page.SwingsPage;
 import page.UserPage;
 
-public class TestToCompare extends BaseTest {
+public class RemoveFromCart extends BaseTest {
 
-
-	 // Scenario 5 ----> compare two products 
 	@Test
-	public void TestCompare() throws Exception {
+	public void RemoveFromCart() throws Exception{
 		HomePage homePage = new HomePage(driver);
 		homePage.closePOP();
 		Valid v = new Valid();
@@ -30,23 +31,29 @@ public class TestToCompare extends BaseTest {
 		homePage.setLoginPassword(pw);
 		homePage.clickLogin(); 
 		v.verifyHomePage("Furniture Online: Buy Home Wooden Furniture in India @ 30% OFF - Urban Ladder",driver);
+		
 		UserPage userPage = new UserPage(driver);
 		userPage.selectLivingModule();
 		Thread.sleep(500);
 		userPage.clickOnSwingChairs();
-		
+		String acTitle = "Outdoor Swing Chairs: Buy Outdoor Swing Chairs Online for Best Prices in India - Urban Ladder";
+		String exTitle = driver.getTitle();
+		Assert.assertEquals(acTitle, exTitle);
 		SwingsPage swingsPage = new SwingsPage(driver);
 		Thread.sleep(1000);
 		swingsPage.hoverImage();
+		swingsPage.clickOnImage();
 		Thread.sleep(1000);
-		swingsPage.clickOnAddtoCompare();
+		String actTitle = "Calabah Swing Chair - Urban Ladder";
+		String expTitle = driver.getTitle();
+		Assert.assertEquals(actTitle, expTitle);
+		SwingProductPage product = new SwingProductPage(driver);
+		product.clickOnAddToCart();
+		SwingCheckoutPage swingcheckout = new SwingCheckoutPage(driver);
+		swingcheckout.close();
+		SwingProductLogout s = new SwingProductLogout(driver);
+		s.logoutHover();
+		s.logout();
 		
-		Thread.sleep(1000);
-		swingsPage.hoverImage1();
-		Thread.sleep(2000);
-		swingsPage.clickOnAddtoCompare1();
-		Thread.sleep(500);
-		//driver.findElement(By.xpath("(//div[@class=\"icofont-cross\"])[4]")).click();
-		swingsPage.clickOnCompare();
 	}
 }

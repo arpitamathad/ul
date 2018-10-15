@@ -17,6 +17,9 @@ public class HomePage {
 	
 	private WebDriver driver ;
 	
+	@FindBy(id="search")
+	private WebElement search; 
+	
 	@FindBy(xpath="(//a[contains(.,'Close')])[2]")
 	private WebElement closeBTN;
 	
@@ -53,6 +56,9 @@ public class HomePage {
 	@FindBy(xpath="//input[@value=\"Log In\"]")
 	private WebElement clickLogin;
 	
+	@FindBy(xpath="//span[@class='search-icon icofont-search']")
+	private WebElement clickOnSearch;
+	
 	// Initiatlization 
 	
 	public HomePage(WebDriver driver){
@@ -60,6 +66,11 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 	
+	public void search(String text) {
+		search.click();
+		search.sendKeys(text);
+		clickOnSearch.click();
+	}
 	//Utilization
 	
 	public void hoverOnUser() {

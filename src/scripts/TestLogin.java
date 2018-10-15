@@ -22,9 +22,9 @@ public class TestLogin extends BaseTest {
 			homePage.hoverOnUser();
 			homePage.clickOnLogin();
 			Thread.sleep(1000);
-			String un = GetXLData.getXLData("./excel/logincredentials", 1, 0);
+			String un = GetXLData.getXLData("./excel/logincredentials.xlsx", 1, 0);
 			homePage.setLoginUsername(un);
-			String pw = GetXLData.getXLData("./excel/logincredentials", 1, 1);
+			String pw = GetXLData.getXLData("./excel/logincredentials.xlsx", 1, 1);
 			homePage.setLoginPassword(pw);
 			homePage.clickLogin();
 			v.verifyHomePage("Furniture Online: Buy Home Wooden Furniture in India @ 30% OFF - Urban Ladder",driver);

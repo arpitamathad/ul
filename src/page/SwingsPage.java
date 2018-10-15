@@ -23,6 +23,9 @@ public class SwingsPage {
 	@FindBy(xpath="(//span[.=\"Add to Wishlist\"])[1]")
 	private WebElement clickOnWishlist;
 	
+	@FindBy(xpath="(//span[.='Added to Wishlist'])[1]")
+	private WebElement clickOnRemoveWishList;
+	
 	@FindBy(xpath="(//a[.='Add to Compare'])[1]")
 	private WebElement add;
 	
@@ -32,11 +35,16 @@ public class SwingsPage {
 	@FindBy(xpath="//button[@id='compare-cta']")
 	private WebElement compare;
 	
+	@FindBy(xpath="//span[@class='remove-prod icofont-cross']")
+	private WebElement close;
+	
 	public SwingsPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
+	public void close() {
+		close.click();
+	}
 	public void hoverImage() throws Exception {
 		JavascriptExecutor j = (JavascriptExecutor) driver; 
 		j.executeScript("window.scrollBy(0,100)");
@@ -65,6 +73,9 @@ public class SwingsPage {
 	}
 	public void addToWishList() {
 		clickOnWishlist.click();
+	}
+	public void removeFromWishList() {
+		clickOnRemoveWishList.click();
 	}
 	public void clickOnImage() {
 		hoverOnImage.click();

@@ -12,6 +12,9 @@ public class SwingCheckoutPage {
 	@FindBy(id="checkout-link")
 	private WebElement checkout;
 	
+	@FindBy(xpath="(//div[@class='icofont-cross_thin'])[2]")
+	private WebElement close;
+	
 	public SwingCheckoutPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -20,5 +23,11 @@ public class SwingCheckoutPage {
 	public void clickOnCheckout() {
 		checkout.click();
 	}
+	
+	public void close() {
+		close.click();
+	}
+	
+	
 
 }

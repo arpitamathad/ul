@@ -13,7 +13,7 @@ public class UserPage {
 	
 	@FindBy(xpath="//span[@class='header-icon-link user-profile-icon']")
 	private WebElement hover;
-	@FindBy(xpath="//a[.=\"Logout\"]")
+	@FindBy(xpath="//a[.='Logout']")
 	private WebElement logout;
 	@FindBy(xpath="//li[@class=\"topnav_item livingunit\"]")
 	private WebElement living;

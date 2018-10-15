@@ -1,5 +1,4 @@
 package scripts;
-import org.openqa.selenium.By;
 //completed
 import org.testng.annotations.Test;
 
@@ -10,12 +9,10 @@ import page.HomePage;
 import page.SwingsPage;
 import page.UserPage;
 
-public class TestToCompare extends BaseTest {
+public class RemoveFromCompare extends BaseTest{
 
-
-	 // Scenario 5 ----> compare two products 
 	@Test
-	public void TestCompare() throws Exception {
+	public void RemoveFromCompare() throws Exception {
 		HomePage homePage = new HomePage(driver);
 		homePage.closePOP();
 		Valid v = new Valid();
@@ -40,13 +37,9 @@ public class TestToCompare extends BaseTest {
 		swingsPage.hoverImage();
 		Thread.sleep(1000);
 		swingsPage.clickOnAddtoCompare();
-		
 		Thread.sleep(1000);
-		swingsPage.hoverImage1();
-		Thread.sleep(2000);
-		swingsPage.clickOnAddtoCompare1();
-		Thread.sleep(500);
-		//driver.findElement(By.xpath("(//div[@class=\"icofont-cross\"])[4]")).click();
-		swingsPage.clickOnCompare();
+		swingsPage.close();
+		userPage.mouseHover();
+		userPage.logout();
 	}
 }
