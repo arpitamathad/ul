@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="scripts.TestAddToCart">
+        <methods>
+          <include name="TestAddtoCart"/>
+          <include name="CloseApplication"/>
+          <include name="OpenApplication"/>
+        </methods>
+      </class> <!-- scripts.TestAddToCart -->
+      <class name="scripts.TestAddtoWishList">
+        <methods>
+          <include name="CloseApplication"/>
+          <include name="TestAddToWishlist"/>
+          <include name="OpenApplication"/>
+        </methods>
+      </class> <!-- scripts.TestAddtoWishList -->
+      <class name="scripts.TestToCompare">
+        <methods>
+          <include name="CloseApplication"/>
+          <include name="OpenApplication"/>
+          <include name="TestCompare"/>
+        </methods>
+      </class> <!-- scripts.TestToCompare -->
+      <class name="scripts.TestLogin">
+        <methods>
+          <include name="CloseApplication"/>
+          <include name="TestLoginIn"/>
+          <include name="OpenApplication"/>
+        </methods>
+      </class> <!-- scripts.TestLogin -->
+      <class name="scripts.TestHome">
+        <methods>
+          <include name="CloseApplication"/>
+          <include name="TestHomePage"/>
+          <include name="OpenApplication"/>
+          <include name="TestSignUp"/>
+        </methods>
+      </class> <!-- scripts.TestHome -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -17,7 +17,7 @@ public class HomePage {
 	
 	private WebDriver driver ;
 	
-	@FindBy(xpath="(//a[contains(.,\"Close\")])[2]")
+	@FindBy(xpath="(//a[contains(.,'Close')])[2]")
 	private WebElement closeBTN;
 	
 	@FindBys({

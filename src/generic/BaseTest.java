@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 
-	public WebDriver driver;
+	public  WebDriver driver;
 	static {
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 	}
@@ -24,6 +24,6 @@ public class BaseTest {
 	
 	@AfterMethod
 	public void CloseApplication() {
-		driver.close();
+		//driver.close();
 	}
 }

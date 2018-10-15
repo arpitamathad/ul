@@ -3,6 +3,7 @@ package scripts;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
+import generic.GetXLData;
 import page.HomePage;
 import page.SwingsPage;
 import page.UserPage;
@@ -19,8 +20,10 @@ public class TestToCompare extends BaseTest {
 		homePage.hoverOnUser();
 		homePage.clickOnLogin();
 		Thread.sleep(1000);
-		homePage.setLoginUsername("shomathad@gmail.com");
-		homePage.setLoginPassword("arpita1234");
+		String un = GetXLData.getXLData("./excel/logincredentials", 1, 0);
+		homePage.setLoginUsername(un);
+		String pw = GetXLData.getXLData("./excel/logincredentials", 1, 1);
+		homePage.setLoginPassword(pw);
 		homePage.clickLogin(); 
 		UserPage userPage = new UserPage(driver);
 		userPage.selectLivingModule();
