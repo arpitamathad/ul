@@ -5,9 +5,9 @@
     <classes>
       <class name="scripts.TestHome">
         <methods>
-          <include name="TestCompare"/>
           <include name="CloseApplication"/>
           <include name="OpenApplication"/>
+          <include name="TestAddToWishlist"/>
         </methods>
       </class> <!-- scripts.TestHome -->
     </classes>

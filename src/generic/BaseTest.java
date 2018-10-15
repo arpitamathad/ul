@@ -24,6 +24,6 @@ public class BaseTest {
 	
 	@AfterMethod
 	public void CloseApplication() {
-		//driver.close();
+		driver.close();
 	}
 }
