@@ -36,10 +36,10 @@ public class Search extends BaseTest {
 		SofaProductPage s = new SofaProductPage(driver);
 		GetScreenShot.getPhoto(driver, "./screenshots");
 		//Wait.wait(s.logout(), driver);
-		JavascriptExecutor j = (JavascriptExecutor) driver;
-		j.executeScript("window.scrollBy(0,-100");
-		Thread.sleep(1000);
-		s.logout();
+//		JavascriptExecutor j = (JavascriptExecutor) driver;
+//		j.executeScript("window.scrollBy(0,-100");
+//		Thread.sleep(1000);
+//		s.logout();
 	
 		
 	}
