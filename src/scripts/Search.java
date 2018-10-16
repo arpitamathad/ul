@@ -1,5 +1,5 @@
 package scripts;
-
+//completed
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
@@ -35,11 +35,8 @@ public class Search extends BaseTest {
 		//v.verifyHomePage(expectedTitle, driver);
 		SofaProductPage s = new SofaProductPage(driver);
 		GetScreenShot.getPhoto(driver, "./screenshots");
-		//Wait.wait(s.logout(), driver);
-//		JavascriptExecutor j = (JavascriptExecutor) driver;
-//		j.executeScript("window.scrollBy(0,-100");
-//		Thread.sleep(1000);
-//		s.logout();
+
+		s.logout();
 	
 		
 	}
