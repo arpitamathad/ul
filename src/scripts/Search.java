@@ -1,13 +1,16 @@
 package scripts;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
+import generic.GetScreenShot;
 import generic.GetXLData;
 import generic.Valid;
+import generic.Wait;
 import page.HomePage;
 import page.SofaPage;
-import page.UserPage;
+import page.SofaProductPage;
 
 public class Search extends BaseTest {
 
@@ -30,9 +33,14 @@ public class Search extends BaseTest {
 		SofaPage sofaPage = new SofaPage(driver);
 		sofaPage.hover();
 		//v.verifyHomePage(expectedTitle, driver);
-		UserPage userPage = new UserPage(driver);
-		userPage.mouseHover();
-		userPage.logout();
+		SofaProductPage s = new SofaProductPage(driver);
+		GetScreenShot.getPhoto(driver, "./screenshots");
+		//Wait.wait(s.logout(), driver);
+		JavascriptExecutor j = (JavascriptExecutor) driver;
+		j.executeScript("window.scrollBy(0,-100");
+		Thread.sleep(1000);
+		s.logout();
+	
 		
 	}
 }

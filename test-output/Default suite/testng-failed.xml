@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="scripts.TestToCompare">
+      <class name="scripts.Search">
         <methods>
+          <include name="SearchProduct"/>
           <include name="CloseApplication"/>
           <include name="OpenApplication"/>
-          <include name="TestCompare"/>
         </methods>
-      </class> <!-- scripts.TestToCompare -->
+      </class> <!-- scripts.Search -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
