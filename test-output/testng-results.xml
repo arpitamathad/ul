@@ -2,36 +2,30 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[HomePage displayed succesfully!!!!]]>
-    </line>
-    <line>
-      <![CDATA[HomePage displayed succesfully!!!!]]>
+      <![CDATA[success]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="68070" started-at="2018-10-16T08:35:37Z" finished-at="2018-10-16T08:36:45Z">
+  <suite name="Default suite" duration-ms="96194" started-at="2018-10-18T10:31:15Z" finished-at="2018-10-18T10:32:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="68070" started-at="2018-10-16T08:35:37Z" finished-at="2018-10-16T08:36:45Z">
-      <class name="scripts.Search">
-        <test-method status="PASS" signature="OpenApplication()[pri:0, instance:scripts.Search@52feb982]" name="OpenApplication" is-config="true" duration-ms="22283" started-at="2018-10-16T08:35:37Z" finished-at="2018-10-16T08:35:59Z">
+    <test name="Default test" duration-ms="96194" started-at="2018-10-18T10:31:15Z" finished-at="2018-10-18T10:32:51Z">
+      <class name="scripts.TestHome">
+        <test-method status="PASS" signature="OpenApplication()[pri:0, instance:scripts.TestHome@52feb982]" name="OpenApplication" is-config="true" duration-ms="22555" started-at="2018-10-18T10:31:15Z" finished-at="2018-10-18T10:31:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApplication -->
-        <test-method status="PASS" signature="SearchProduct()[pri:0, instance:scripts.Search@52feb982]" name="SearchProduct" duration-ms="45764" started-at="2018-10-16T08:35:59Z" finished-at="2018-10-16T08:36:45Z">
+        <test-method status="PASS" signature="TestHomePage()[pri:0, instance:scripts.TestHome@52feb982]" name="TestHomePage" duration-ms="73623" started-at="2018-10-18T10:31:38Z" finished-at="2018-10-18T10:32:51Z">
           <reporter-output>
             <line>
-              <![CDATA[HomePage displayed succesfully!!!!]]>
-            </line>
-            <line>
-              <![CDATA[HomePage displayed succesfully!!!!]]>
+              <![CDATA[success]]>
             </line>
           </reporter-output>
-        </test-method> <!-- SearchProduct -->
-        <test-method status="PASS" signature="CloseApplication()[pri:0, instance:scripts.Search@52feb982]" name="CloseApplication" is-config="true" duration-ms="0" started-at="2018-10-16T08:36:45Z" finished-at="2018-10-16T08:36:45Z">
+        </test-method> <!-- TestHomePage -->
+        <test-method status="PASS" signature="CloseApplication()[pri:0, instance:scripts.TestHome@52feb982]" name="CloseApplication" is-config="true" duration-ms="0" started-at="2018-10-18T10:32:51Z" finished-at="2018-10-18T10:32:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseApplication -->
-      </class> <!-- scripts.Search -->
+      </class> <!-- scripts.TestHome -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
